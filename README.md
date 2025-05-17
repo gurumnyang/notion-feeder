@@ -60,7 +60,10 @@ Different views of accessing Unread, Starred feed items.
    NOTION_API_TOKEN
    NOTION_READER_DATABASE_ID
    NOTION_FEEDS_DATABASE_ID
+   KEYWORDS  # optional comma separated list for auto-starred items
    ```
+
+   Items containing any of the provided keywords will be automatically marked as **Starred** in Notion.
 
    > To find your database id, visit your database on Notion. You'll get a URL like this: https://www.notion.so/{workspace_name}/{database_id}?v={view_id}. For example, if your URL looks like this: https://www.notion.so/abc/xyz?v=123, then `xyz` is your database ID.
 
