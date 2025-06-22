@@ -38,10 +38,16 @@ export async function getFeedUrlsFromNotion() {
     return [];
   }
 
-  const feeds = response.results.map((item) => ({
-    title: item.properties.Title.title[0].plain_text,
-    feedUrl: item.properties.Link.url,
-  }));
+  const feeds = response.results.map((item) => {
+    const filter =
+      item.properties.Filter?.rich_text?.map((t) => t.plain_text).join('') || '';
+
+    return {
+      title: item.properties.Title.title[0].plain_text,
+      feedUrl: item.properties.Link.url,
+      filter,
+    };
+  });
 
   return feeds;
 }

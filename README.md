@@ -28,6 +28,8 @@ Add, enable and disable your feed sources.
 
 ![](/screenshots/image-2.png)
 
+Filter individual feeds using comma separated keywords in the `Filter` column.
+
 Feeds are sourced daily and stored in the **Reader** database. New feed items are marked with 🔥.
 
 ![](/screenshots/image-3.png)
